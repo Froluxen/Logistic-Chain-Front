@@ -1,0 +1,88 @@
+/* ====================================== */
+/* ✨ Animación principal del logo        */
+/* ====================================== */
+.logo-animated {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 1.2s ease-out forwards;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* 🎬 Keyframes: aparición + escala */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 🪶 Hover suave */
+.logo-animated:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2));
+}
+
+/* =============================== */
+/* 📱 Escalado responsive          */
+/* =============================== */
+@media (max-width: 768px) {
+    .logo-animated {
+        max-width: 120px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-animated {
+        max-width: 90px !important;
+    }
+}
+
+/* =============================== */
+/* ⚙️ Estilo global + transiciones */
+/* =============================== */
+body {
+    font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* =============================== */
+/* 🔗 Enlaces                     */
+/* =============================== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =============================== */
+/* 🧩 Botones Bootstrap ajustados */
+/* =============================== */
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* =============================== */
+/* 🌙 Compatibilidad modo oscuro  */
+/* =============================== */
+body.bg-dark {
+    background-color: #121212 !important;
+    color: #f1f1f1 !important;
+}
+
+body.bg-dark a {
+    color: #66b2ff !important;
+}
